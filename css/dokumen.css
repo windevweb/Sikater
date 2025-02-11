@@ -1,0 +1,66 @@
+/* Card Stroke Style */
+.card-stroke {
+    border: 2px solid #ccc; /* Default stroke effect */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: none; /* Remove default shadow */
+    position: relative; /* Ensure the card is a positioning context */
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+  }
+  
+  .card-stroke:hover {
+    border-color: #007bff; /* Change border color on hover */
+  }
+  
+  /* Background Logo Styling */
+  .background-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px; /* Large size for better visibility */
+    opacity: 0.1; /* Semi-transparent */
+    z-index: -1; /* Place behind the card content */
+    pointer-events: none; /* Ensure it doesn't interfere with clicks */
+    filter: brightness(0.8); /* Optional: Adjust brightness for better contrast */
+    visibility: visible !important; /* Ensure logo is always visible */
+  }
+  
+  /* Button Styling */
+  .btn-download {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .btn-download:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+  }
+  
+  /* Card Body Styling */
+  .card-body {
+    padding: 1.5rem;
+  }
+  
+  .card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .card-text {
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  /* Footer Styling */
+  .footer {
+    background: #007bff; /* Primary blue */
+    color: white;
+    padding: 1rem 0; /* Add vertical padding */
+    margin-top: auto; /* Push footer to the bottom */
+  }
+  
+  .footer p {
+    font-size: 0.9rem;
+    margin: 0;
+  }

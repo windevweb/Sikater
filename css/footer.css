@@ -1,0 +1,42 @@
+/* Footer Styling */
+.footer {
+    background: #007bff; /* Primary blue */
+    color: white;
+  }
+  
+  .footer a {
+    color: white; /* White text for links */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Smooth hover effect */
+  }
+  
+  .footer a:hover {
+    color: #f8f9fa; /* Lighten text on hover */
+  }
+  
+  .footer img {
+    vertical-align: middle; /* Align logo properly */
+  }
+  
+  .footer h6 {
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer ul {
+    padding: 0; /* Remove default padding */
+  }
+  
+  .footer li {
+    margin-bottom: 0.25rem; /* Add spacing between list items */
+  }
+  
+  .footer .small {
+    font-size: 0.8rem; /* Smaller font size for descriptions */
+  }
+  
+  .footer .fab,
+  .footer .fas {
+    font-size: 1.2rem; /* Larger icons */
+  }

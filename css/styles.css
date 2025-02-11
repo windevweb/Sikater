@@ -1,0 +1,298 @@
+/* Fade-in Animation */
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Card Hover Effect */
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-10px); /* Move card up slightly */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Add subtle shadow */
+}
+
+/* Square Card Design */
+.square-card {
+  border-radius: 0; /* Remove rounded corners */
+}
+
+/* Transparent Badge Top Notch Styling */
+.badge-top-notch {
+  z-index: 1; /* Ensure badge is above the card */
+}
+
+.badge-transparent {
+  background-color: rgba(204, 204, 204, 0.5); /* Semi-transparent gray */
+  color: #000; /* Black text */
+  font-size: 0.875rem;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+}
+
+/* Gradient Badges */
+.badge-gradient-warning {
+  background: linear-gradient(135deg, #ffecb5, #ffe082);
+  color: #664d03;
+  font-size: 0.875rem;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+}
+
+.badge-gradient-success {
+  background: linear-gradient(135deg, #c3e6cb, #a3cfbb);
+  color: #155724;
+  font-size: 0.875rem;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+}
+
+.badge-gradient-danger {
+  background: linear-gradient(135deg, #f8d7da, #f5c6cb);
+  color: #721c24;
+  font-size: 0.875rem;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+}
+
+/* Horizontal Line Styling */
+hr {
+  border: 0;
+  height: 1px;
+  background: #ccc; /* Light gray */
+  margin: 1rem 0; /* Add spacing above and below the line */
+}
+
+/* Card Link Styling */
+.card-link {
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Inherit text color */
+}
+
+/* Icon Background for Cards */
+.icon-background {
+  z-index: -1; /* Place behind the card content */
+  pointer-events: none; /* Ensure it doesn't interfere with clicks */
+}
+
+/* Audit Log Styling */
+#auditLog {
+  font-size: 0.9rem;
+}
+
+#auditLog i {
+  width: 20px;
+  text-align: center;
+}
+
+/* Navbar Styling */
+.navbar {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.navbar-nav .nav-link {
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #fff !important; /* Highlight on hover */
+}
+
+/* Hero Section Styling */
+.hero-section {
+  background: #f8f9fa; /* Light gray background */
+  color: #333; /* Dark text */
+  padding: 6rem 0;
+}
+
+.hero-section h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.hero-section p {
+  font-size: 1.25rem;
+  color: #555; /* Light gray for description */
+  margin-bottom: 2rem;
+}
+
+.hero-section .btn {
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+}
+
+/* Features Section Styling */
+.features-section {
+  background: #f8f9fa; /* Light gray background */
+  padding: 4rem 0;
+}
+
+.features-section h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.features-section .card {
+  border: none; /* Remove default border */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.features-section .card:hover {
+  transform: translateY(-5px); /* Slight upward movement */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.features-section .card i {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.features-section .card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.features-section .card-text {
+  font-size: 0.9rem;
+}
+
+/* Timeline Section Styling */
+.timeline {
+  position: relative;
+  padding: 2rem 0;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background-color: #ccc;
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.timeline-item:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+  text-align: right;
+}
+
+.timeline-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 1.25rem;
+  z-index: 1;
+}
+
+.timeline-content {
+  width: 45%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-content h5 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-content p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Footer Styling */
+footer {
+  background: #007bff; /* Primary blue */
+  color: white;
+  padding: 1.5rem 0;
+  margin-top: 4rem;
+}
+
+footer p {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Card Grid with Background Logo */
+.card-grid-container {
+  position: relative;
+  padding: 2rem 0;
+}
+
+.background-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px; /* Adjust size as needed */
+  opacity: 0.1; /* Semi-transparent */
+  z-index: -1; /* Place behind the cards */
+  pointer-events: none; /* Ensure it doesn't interfere with clicks */
+}
+
+#documentCards {
+  margin-top: 2rem;
+}
+
+#documentCards .card {
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#documentCards .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+#documentCards .card-body {
+  padding: 1.5rem;
+}
+
+#documentCards .card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+#documentCards .card-text {
+  font-size: 0.9rem;
+  color: #555;
+}

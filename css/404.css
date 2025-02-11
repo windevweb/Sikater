@@ -1,0 +1,58 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa; /* Light gray background */
+  }
+  
+  .container-fluid {
+    padding: 0; /* Remove default padding */
+  }
+  
+  .display-1 {
+    font-size: 10rem; /* Large error code */
+    line-height: 1; /* Reduce spacing between lines */
+    animation: pulse 2s infinite; /* Add pulsing animation */
+  }
+  
+  h2 {
+    font-size: 2rem;
+    color: #343a40; /* Dark gray text */
+  }
+  
+  .lead {
+    font-size: 1.25rem;
+    color: #6c757d; /* Gray text */
+  }
+  
+  .btn-primary {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1); /* Add shadow on hover */
+  }
+  
+  /* Floating Animation for Illustration */
+  .animated-float {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  /* Animations */
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }

@@ -1,0 +1,36 @@
+/* Styling for Sections */
+section {
+    margin-bottom: 2rem;
+  }
+  
+  /* Section Titles */
+  section h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #007bff; /* Blue underline */
+    padding-bottom: 0.5rem;
+  }
+  
+  /* Lists Styling */
+  section ul,
+  section ol {
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  section li {
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Tips Section */
+  #tips-sukses ul li::before {
+    content: "💡 "; /* Add a lightbulb icon before each tip */
+    color: #ffc107; /* Yellow color */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    section h2 {
+      font-size: 1.5rem;
+    }
+  }

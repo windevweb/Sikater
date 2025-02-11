@@ -1,0 +1,36 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .fade-in {
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  /* Table Styling */
+  .table-container {
+    background-color: #ffffff; /* White background */
+    border-radius: 15px; /* Rounded corners */
+    overflow: hidden; /* Ensure rounded corners are visible */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+  }
+  
+  .table thead th {
+    background-color: #e7f3fe; /* Light blue */
+    color: #007bff; /* Primary blue */
+    border-bottom: none; /* Remove bottom border */
+  }
+  
+  .table tbody tr:hover {
+    background-color: #f8f9fa; /* Light gray on hover */
+  }

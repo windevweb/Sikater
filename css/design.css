@@ -1,0 +1,96 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Card Styling */
+  .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none; /* Remove default border */
+    border-radius: 10px; /* Rounded corners */
+  }
+  
+  .card:hover {
+    transform: translateY(-10px); /* Move card up slightly on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+  }
+  
+  .card-title {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    font-weight: bold; /* Make titles bold */
+  }
+  
+  .card-text {
+    font-size: 0.9rem;
+    line-height: 1.6; /* Improve readability */
+  }
+  
+  /* Icons in Card Titles */
+  .card-title i {
+    margin-right: 0.5rem; /* Add spacing between icon and text */
+  }
+  
+  /* Download Buttons */
+  .btn-download {
+    transition: transform 0.3s ease;
+  }
+  
+  .btn-download:hover {
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+  }
+  
+  /* Section Styling */
+  section {
+    margin-bottom: 2rem;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .card {
+      margin-bottom: 1.5rem; /* Add spacing between cards on smaller screens */
+    }
+  
+    .card-title {
+      font-size: 1.1rem; /* Reduce font size for smaller screens */
+    }
+  
+    .card-text {
+      font-size: 0.85rem; /* Reduce font size for smaller screens */
+    }
+  }
+  
+  /* Custom Colors for Cards */
+  .card-logo {
+    background-color: #e7f3fe; /* Light blue */
+    color: #007bff; /* Primary blue */
+  }
+  
+  .card-stationary {
+    background-color: #e6f7ed; /* Light green */
+    color: #28a745; /* Success green */
+  }
+  
+  .card-kop-surat {
+    background-color: #fff8e1; /* Light yellow */
+    color: #ffc107; /* Warning yellow */
+  }
+  
+  .card-website {
+    background-color: #e7f3ff; /* Light teal */
+    color: #17a2b8; /* Info teal */
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .fade-in {
+    animation: fadeIn 1s ease-in-out;
+  }

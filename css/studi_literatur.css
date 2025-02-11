@@ -1,0 +1,72 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Card Styling */
+  .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none; /* Remove default border */
+    border-radius: 10px; /* Rounded corners */
+  }
+  
+  .card:hover {
+    transform: translateY(-10px); /* Move card up slightly on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+  }
+  
+  .card-title {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    font-weight: bold; /* Make titles bold */
+  }
+  
+  .card-text {
+    font-size: 0.9rem;
+    line-height: 1.6; /* Improve readability */
+  }
+  
+  /* Table Container Styling */
+  .table-container {
+    background-color: #ffffff; /* White background */
+    border-radius: 15px; /* Rounded corners */
+    overflow: hidden; /* Ensure rounded corners are visible */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+  }
+  
+  /* Table Styling */
+  .table-responsive {
+    overflow-x: auto;
+  }
+  
+  .table thead th {
+    background-color: #e7f3fe; /* Light blue */
+    color: #007bff; /* Primary blue */
+    border-bottom: none; /* Remove bottom border */
+  }
+  
+  .table tbody tr:hover {
+    background-color: #f8f9fa; /* Light gray on hover */
+  }
+  
+  .table a.btn {
+    transition: transform 0.3s ease;
+  }
+  
+  .table a.btn:hover {
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .fade-in {
+    animation: fadeIn 1s ease-in-out;
+  }

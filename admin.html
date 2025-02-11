@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin - Sistem Pengelolaan Karya Akhir</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <i class="fas fa-graduation-cap me-2"></i>Admin Panel
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">
+              <i class="fas fa-home me-2"></i>Beranda
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="studi_literatur_admin.html">
+              <i class="fas fa-book-open me-2"></i>Studi Literatur Admin
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="admin.html">
+              <i class="fas fa-user-shield me-2"></i>Admin
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container-fluid p-5 fade-in">
+    <h1 class="display-4 text-center">Admin Panel</h1>
+    <p class="lead text-center">Kelola semua dokumen karya akhir dari sini.</p>
+    <!-- Data Display with Grid System -->
+    <div class="row" id="adminCards">
+      <!-- Cards will be dynamically added here -->
+    </div>
+  </div>
+
+  <!-- Modal for Edit -->
+  <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="editModalLabel">Edit Dokumen</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="editForm">
+            <input type="hidden" id="editId">
+            <div class="mb-3">
+              <label for="editJudul" class="form-label"><i class="fas fa-heading me-2"></i>Judul Karya Akhir</label>
+              <input type="text" class="form-control" id="editJudul" placeholder="Masukkan judul karya akhir" required>
+            </div>
+            <div class="mb-3">
+              <label for="editDeskripsi" class="form-label"><i class="fas fa-align-left me-2"></i>Deskripsi Progress</label>
+              <textarea class="form-control" id="editDeskripsi" rows="3" placeholder="Tulis deskripsi progress" required></textarea>
+            </div>
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label for="editVersi" class="form-label"><i class="fas fa-hashtag me-2"></i>Versi Dokumen Revisi</label>
+                <input type="number" class="form-control" id="editVersi" min="1" required>
+              </div>
+              <div class="col-md-6">
+                <label for="editStatus" class="form-label"><i class="fas fa-check-circle me-2"></i>Status</label>
+                <select class="form-select" id="editStatus" required>
+                  <option value="diajukan">Diajukan</option>
+                  <option value="acc">ACC</option>
+                  <option value="revisi">Revisi</option>
+                </select>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="editType" class="form-label"><i class="fas fa-file me-2"></i>Type Dokumen</label>
+              <select class="form-select" id="editType" required>
+                <option value="proposal">Proposal</option>
+                <option value="KA">Karya Akhir</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="editUrl" class="form-label"><i class="fas fa-link me-2"></i>URL Dokumen</label>
+              <input type="url" class="form-control" id="editUrl" placeholder="Masukkan URL dokumen" required>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Simpan Perubahan</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS and Popper.js -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Supabase Client -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+  <!-- SweetAlert2 for Notifications -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <!-- Custom JS -->
+  <script src="js/admin-script.js"></script>
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Studi Literatur - Sistem Pengelolaan Karya Akhir</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Studi Literatur-specific CSS -->
+  <link rel="stylesheet" href="css/studi_literatur.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <i class="fas fa-graduation-cap me-2"></i>Sistem Karya Akhir
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">
+              <i class="fas fa-home me-2"></i>Beranda
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="progress.html">
+              <i class="fas fa-tasks me-2"></i>Progress
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="dokumen.html">
+              <i class="fas fa-file-alt me-2"></i>Dokumen
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="panduan.html">
+              <i class="fas fa-book me-2"></i>Panduan
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="observasi_wawancara.html">
+              <i class="fas fa-users me-2"></i>Observasi & Wawancara
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="studi_literatur.html">
+              <i class="fas fa-book-open me-2"></i>Studi Literatur
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="design.html">
+              <i class="fas fa-palette me-2"></i>Desain
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="404.html">
+              <i class="fas fa-user me-2"></i>Profil
+              <span class="badge bg-danger ms-2">Belum Tersedia</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container-fluid p-5 fade-in">
+    <div class="main-header text-center mb-5">
+      <h1 class="display-4">Studi Literatur</h1>
+      <p class="lead">Panduan dan referensi untuk melaksanakan studi literatur dalam pengembangan karya akhir.</p>
+    </div>
+
+    <!-- Section: Penjelasan (Card Layout) -->
+    <section id="penjelasan" class="mb-5">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card shadow-sm h-100 card-penjelasan">
+            <div class="card-body">
+              <h5 class="card-title text-primary"><i class="fas fa-info-circle me-2"></i>Penjelasan Umum</h5>
+              <p class="card-text">
+                Studi literatur adalah proses mengumpulkan, menganalisis, dan mensintesis informasi dari berbagai sumber untuk mendukung penelitian. Berikut adalah langkah-langkah utama dalam studi literatur:
+              </p>
+              <ol class="list-unstyled">
+                <li><strong>Identifikasi Topik:</strong> Tentukan topik penelitian yang spesifik.</li>
+                <li><strong>Cari Sumber:</strong> Gunakan database seperti Google Scholar, PubMed, atau perpustakaan universitas.</li>
+                <li><strong>Evaluasi Sumber:</strong> Pastikan sumber yang digunakan relevan dan terpercaya.</li>
+                <li><strong>Sintesis Informasi:</strong> Gabungkan temuan dari berbagai sumber menjadi satu kesimpulan.</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Tabel Studi Literatur -->
+    <section id="tabel-literatur" class="mb-5">
+      <h2 class="text-center mb-4">Daftar Sumber Studi Literatur</h2>
+      <div class="table-responsive rounded shadow-sm">
+        <table class="table table-striped table-hover">
+          <thead class="table-primary rounded-top">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Judul</th>
+              <th scope="col">Penulis</th>
+              <th scope="col">Tahun</th>
+              <th scope="col">Aksi</th>
+            </tr>
+          </thead>
+          <tbody id="literaturTableBody">
+            <!-- Data akan dimuat secara dinamis -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+
+  <!-- Placeholder for Footer -->
+  <div id="footer-placeholder"></div>
+
+  <!-- Bootstrap JS and Popper.js -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Supabase Client -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+
+  <!-- Load Footer Dynamically -->
+  <script>
+    // Dynamically load footer.html into the placeholder
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-placeholder').innerHTML = data;
+      })
+      .catch(error => console.error('Error loading footer:', error));
+  </script>
+
+  <!-- Custom JS to Load Data from Supabase -->
+  <script>
+    // Initialize Supabase client
+    const supabaseUrl = "https://eyzvqdknrkkjznqvmxgb.supabase.co";
+    const supabaseKey =
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImV5enZxZGtucmtranpucXZteGdiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Mzg0OTc1NzksImV4cCI6MjA1NDA3MzU3OX0.v-3bKrF431br9SKSXPzUOHU-f4CW_4SAgtSic502sbs";
+    const supabaseClient = supabase.createClient(supabaseUrl, supabaseKey);
+
+    // Load data from Supabase
+    async function loadData() {
+      try {
+        const { data, error } = await supabaseClient.from("studi_literatur").select("*");
+        if (error) throw error;
+
+        // Clear table body
+        const tableBody = document.getElementById("literaturTableBody");
+        tableBody.innerHTML = "";
+
+        // Populate table with data
+        data.forEach((item, index) => {
+          const row = `
+            <tr>
+              <td>${index + 1}</td>
+              <td>${item.judul}</td>
+              <td>${item.penulis}</td>
+              <td>${item.tahun}</td>
+              <td>
+                <a href="${item.link}" target="_blank" class="btn btn-sm btn-primary">
+                  <i class="fas fa-link"></i> Lihat
+                </a>
+              </td>
+            </tr>
+          `;
+          tableBody.insertAdjacentHTML("beforeend", row);
+        });
+      } catch (error) {
+        console.error("Error loading data:", error);
+        alert("Gagal memuat data studi literatur!");
+      }
+    }
+
+    // Initial load
+    loadData();
+  </script>
+</body>
+</html>
